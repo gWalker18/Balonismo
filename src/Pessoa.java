@@ -1,28 +1,78 @@
-import java.util.Scanner;
+public class Pessoa{
 
-public class Pessoa {
-    public String nome;
-    public String cpf;
-    public long rg;
-    public long telefone;
-    public long telefoneFamiliar;
-    public String endereco;
-    Scanner tcd = new Scanner(System.in);
+        public String nome;
+        public String cpf;
+        public String rg;
+        public String telefone;
+        public String telCont;
+        public String endereco;
 
-    public void digite () {
-        System.out.println("Digite seu nome:");
-        nome = tcd.nextLine();
-        System.out.println("Digite seu CPF:");
-        cpf = tcd.nextLine();
-        System.out.println("Digite seu RG:");
-        rg = tcd.nextLong();
-        System.out.println("Telefones para contato:");
-        telefone = tcd.nextLong();
-        telefoneFamiliar = tcd.nextLong();
-        System.out.println("Digite seu endereço:");
-        endereco = tcd.nextLine();
+        public Pessoa(){
+            this.nome = "Guilherme";
+            this.cpf = "Cpf";
+            this.rg = "RG";
+            this.telefone = "Telefone";
+            this.telCont = "Telefone contato";
+            this.endereco = "Endereço";
+        }
 
-        System.out.println("Informações do cliente: Nome : "+ nome + " CPF: " + cpf+ " RG: "+rg+ " Telefones 1-"+
-                telefone+" 2-"+telefoneFamiliar+" endereço: "+endereco);
-    }
+        public Pessoa(String nome, String cpf,String rg,String telefone,String telCont,String endereço){
+            this.nome = nome;
+            this.cpf = cpf;
+            this.rg = rg;
+            this.telefone = telefone;
+            this.telCont = telCont;
+            this.endereco = endereco;
+        }
+
+        public Pessoa(String nome,String telefone){
+            this.nome = nome;
+            this.cpf = "";
+            this.rg = rg;
+            this.telefone = telefone;
+            this.telCont = telCont;
+            this.endereco = endereco;
+        }
+
+        public void setNome(String nome){
+            this.nome = nome;
+        }
+        public String getNome(){
+            return nome;
+        }
+
+        public void setCpf(String cpf){
+            this.cpf =  cpf;
+        }
+        public String getCpf(){
+            return cpf;
+        }
+
+        public void setRG(String rg){
+            this.rg = rg;
+        }
+        public String getRG(){
+            return rg;
+        }
+
+        public void setTelefone(String telefone){
+            this.telefone =  telefone;
+        }
+        public String getTelefone(){
+            return telefone;
+        }
+
+        public void setTelCont(String telCont){
+            this.telCont =  telCont;
+        }
+        public String getTelCont(){
+            return telCont;
+        }
+
+        public void setEndereco(String endereco){
+            this.endereco =  endereco;
+        }
+        public String getEndereco(){
+            return endereco;
+        }
 }
